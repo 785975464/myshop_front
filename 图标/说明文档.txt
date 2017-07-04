@@ -1,0 +1,46 @@
+2016.10.9
+引用material本地图标时：
+
+STEP 1: 下载字体文件到本地
+
+下载地址：https://github.com/google/material-design-icons/tree/master/iconfont
+
+STEP 2 : 为你的CSS引入字体
+@font-face {
+		font-family: 'Material Icons';
+		font-style: normal;
+		font-weight: 400;
+		src: url(/Sky/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+			src: local('Material Icons'),
+			local('MaterialIcons-Regular'),
+			url(/Sky/iconfont/MaterialIcons-Regular.woff2) format('woff2'),		//目录为：MyProject/iconfont/等文件
+			url(/Sky/iconfont/MaterialIcons-Regular.woff) format('woff'),
+			url(/Sky/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+	}
+
+	.material-icons {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+		font-size: 24px; /* Preferred icon size */
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		line-height: 1;
+		text-transform: none;
+
+		/* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+		/* Support for Safari and Chrome. */
+		text-rendering: optimizeLegibility;
+
+		/* Support for Firefox. */
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Support for IE. */
+		font-feature-settings: 'liga';
+	}
+
+STEP 3: HTML代码
+
+<i class="material-icons">face</i>
